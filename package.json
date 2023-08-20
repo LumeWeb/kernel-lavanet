@@ -1,0 +1,25 @@
+{
+    "name": "@lumeweb/kernel-lavanet",
+    "type": "module",
+    "version": "0.1.0",
+    "readme": "ERROR: No README data found!",
+    "_id": "@lumeweb/kernel-lavanet@0.1.0",
+    "repository": {
+        "type": "git",
+        "url": "gitea@git.lumeweb.com:LumeWeb/kernel-lavanet.git"
+    },
+    "scripts": {
+        "prepare": "presetter bootstrap",
+        "build": "run build",
+        "semantic-release": "semantic-release"
+    },
+    "dependencies": {
+        "@lavanet/lava-sdk": "^0.21.1",
+        "@lumeweb/kernel-rpc-client": "^0.0.2-develop.13",
+        "@lumeweb/libkernel": "^0.1.0-develop.36"
+    },
+    "devDependencies": {
+        "@lumeweb/presetter-kernel-module-preset": "^0.1.0-develop.44",
+        "patch-package": "^8.0.0"
+    }
+}

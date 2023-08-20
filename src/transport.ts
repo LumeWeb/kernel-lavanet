@@ -1,0 +1,50 @@
+import { grpc } from "@improbable-eng/grpc-web";
+import { RpcNetwork } from "@lumeweb/kernel-rpc-client";
+import Metadata = grpc.Metadata;
+
+class HyperTransport implements grpc.Transport {
+  private options: grpc.TransportOptions;
+  private rpc: RpcNetwork;
+  private metadata?: Metadata;
+
+  constructor(transportOptions: grpc.TransportOptions, rpc: RpcNetwork) {
+    this.options = transportOptions;
+    this.rpc = rpc;
+  }
+
+  cancel(): void {}
+
+  finishSend(): void {}
+
+  async sendMessage(msgBytes: Uint8Array): Promise<void> {
+    const req = this.rpc.simpleQuery({
+      query: {
+        module: "lavanet",
+        method: "badge_request",
+        data: {
+          metadata: this.metadata,
+          data: msgBytes,
+        },
+      },
+    });
+
+    const ret = await req.result;
+    if (ret.error) {
+      this.options.onEnd({ message: ret.error, name: "", stack: "" });
+      return;
+    }
+
+    this.options.onChunk(ret.data);
+    this.options.onEnd();
+  }
+
+  start(metadata: Metadata): void {
+    this.metadata = metadata;
+  }
+}
+
+export function hyperTransport(rpc: RpcNetwork): grpc.TransportFactory {
+  return (opts: grpc.TransportOptions) => {
+    return new HyperTransport(opts, rpc);
+  };
+}
