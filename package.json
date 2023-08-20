@@ -1,9 +1,8 @@
 {
     "name": "@lumeweb/kernel-lavanet",
     "type": "module",
-    "version": "0.1.0",
+    "version": "0.1.0-develop.1",
     "readme": "ERROR: No README data found!",
-    "_id": "@lumeweb/kernel-lavanet@0.1.0",
     "repository": {
         "type": "git",
         "url": "gitea@git.lumeweb.com:LumeWeb/kernel-lavanet.git"
