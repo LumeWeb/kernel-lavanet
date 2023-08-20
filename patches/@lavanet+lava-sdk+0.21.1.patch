@@ -1,12 +1,12 @@
 diff --git a/node_modules/@lavanet/lava-sdk/bin/src/badge/fetchBadge.js b/node_modules/@lavanet/lava-sdk/bin/src/badge/fetchBadge.js
-index 0c3063a..5e9cd0c 100644
+index 0c3063a..b989837 100644
 --- a/node_modules/@lavanet/lava-sdk/bin/src/badge/fetchBadge.js
 +++ b/node_modules/@lavanet/lava-sdk/bin/src/badge/fetchBadge.js
 @@ -24,6 +24,7 @@ class BadgeManager {
          this.badgeServerAddress = "";
          this.projectId = "";
          this.active = true;
-+        this.transport = transport;
++        this.transport = options?.transport;
          if (!options) {
              this.active = false;
              return;
