@@ -5,7 +5,6 @@ import Metadata = grpc.Metadata;
 class HyperTransport implements grpc.Transport {
   private options: grpc.TransportOptions;
   private rpc: RpcNetwork;
-  private metadata?: Metadata;
 
   constructor(transportOptions: grpc.TransportOptions, rpc: RpcNetwork) {
     this.options = transportOptions;
@@ -22,7 +21,6 @@ class HyperTransport implements grpc.Transport {
         module: "lavanet",
         method: "badge_request",
         data: {
-          metadata: this.metadata,
           data: msgBytes,
         },
       },
@@ -38,9 +36,7 @@ class HyperTransport implements grpc.Transport {
     this.options.onEnd();
   }
 
-  start(metadata: Metadata): void {
-    this.metadata = metadata;
-  }
+  start(metadata: Metadata): void {}
 }
 
 export function hyperTransport(rpc: RpcNetwork): grpc.TransportFactory {
