@@ -1,0 +1,8 @@
+{
+  "preset": [
+    "@lumeweb/presetter-kernel-module-preset"
+  ],
+    "config": {
+        "official": true
+    }
+}
