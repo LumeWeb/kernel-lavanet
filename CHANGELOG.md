@@ -1,3 +1,10 @@
+# [0.1.0-develop.4](https://git.lumeweb.com/LumeWeb/kernel-lavanet/compare/v0.1.0-develop.3...v0.1.0-develop.4) (2023-08-21)
+
+
+### Bug Fixes
+
+* missing await ([10e83d8](https://git.lumeweb.com/LumeWeb/kernel-lavanet/commit/10e83d8d55fb1925dccc800be7eeae74771fc5b6))
+
 # [0.1.0-develop.3](https://git.lumeweb.com/LumeWeb/kernel-lavanet/compare/v0.1.0-develop.2...v0.1.0-develop.3) (2023-08-21)
 
 
