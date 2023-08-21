@@ -40,7 +40,9 @@ async function handleQuery(aq: ActiveQuery) {
     return;
   }
 
-  const { chain, query, rpcInterface = undefined } = aq.callerInput;
+  let { chain, query, rpcInterface = undefined } = aq.callerInput;
+
+  chain = chain.toUpperCase();
 
   let lava: LavaSDK;
 
