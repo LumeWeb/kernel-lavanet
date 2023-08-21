@@ -10,7 +10,8 @@
     "scripts": {
         "prepare": "presetter bootstrap",
         "build": "run build",
-        "semantic-release": "semantic-release"
+        "semantic-release": "semantic-release",
+        "postinstall": "patch-package"
     },
     "dependencies": {
         "@lavanet/lava-sdk": "^0.21.1",

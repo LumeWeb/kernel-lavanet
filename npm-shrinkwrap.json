@@ -7,6 +7,7 @@
         "": {
             "name": "@lumeweb/kernel-lavanet",
             "version": "0.1.0-develop.1",
+            "hasInstallScript": true,
             "dependencies": {
                 "@lavanet/lava-sdk": "^0.21.1",
                 "@lumeweb/kernel-rpc-client": "^0.0.2-develop.13",
