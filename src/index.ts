@@ -53,7 +53,7 @@ async function handleQuery(aq: ActiveQuery) {
   await rpc.ready;
 
   try {
-    aq.respond(lava.sendRelay(query));
+    aq.respond(await lava.sendRelay(query));
   } catch (e) {
     aq.reject(e);
   }
