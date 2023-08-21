@@ -1,3 +1,10 @@
+# [0.1.0-develop.5](https://git.lumeweb.com/LumeWeb/kernel-lavanet/compare/v0.1.0-develop.4...v0.1.0-develop.5) (2023-08-21)
+
+
+### Bug Fixes
+
+* ensure chain is uppercase since map is indexed by it ([6a3175d](https://git.lumeweb.com/LumeWeb/kernel-lavanet/commit/6a3175dc7b336534fdbfdfb55937e5895b967fb6))
+
 # [0.1.0-develop.4](https://git.lumeweb.com/LumeWeb/kernel-lavanet/compare/v0.1.0-develop.3...v0.1.0-develop.4) (2023-08-21)
 
 
