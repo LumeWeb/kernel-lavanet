@@ -32,7 +32,12 @@ class HyperTransport implements grpc.Transport {
       return;
     }
 
-    this.options.onChunk(ret.data);
+    if (ret.data) {
+      this.options.onHeaders(new grpc.Metadata(), 200);
+      ret.data = new Uint8Array(Object.values(ret.data));
+      this.options.onChunk(ret.data);
+    }
+
     this.options.onEnd();
   }
 
