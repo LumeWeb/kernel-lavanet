@@ -1,3 +1,11 @@
+# [0.1.0-develop.3](https://git.lumeweb.com/LumeWeb/kernel-lavanet/compare/v0.1.0-develop.2...v0.1.0-develop.3) (2023-08-21)
+
+
+### Bug Fixes
+
+* if we have data, set dummy header response, parse data to a uint8array and process as a chunk ([326d382](https://git.lumeweb.com/LumeWeb/kernel-lavanet/commit/326d38275da7a46534ac600bce5b7df6e6be7648))
+* sdk patch needs to use options object ([9259e67](https://git.lumeweb.com/LumeWeb/kernel-lavanet/commit/9259e6723cfeec4ba1a130b6a594b72240c81fd9))
+
 # [0.1.0-develop.2](https://git.lumeweb.com/LumeWeb/kernel-lavanet/compare/v0.1.0-develop.1...v0.1.0-develop.2) (2023-08-20)
 
 # [0.1.0-develop.1](https://git.lumeweb.com/LumeWeb/kernel-lavanet/compare/v0.0.1...v0.1.0-develop.1) (2023-08-20)
