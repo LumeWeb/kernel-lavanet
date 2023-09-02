@@ -15,8 +15,8 @@
     },
     "dependencies": {
         "@lavanet/lava-sdk": "^0.21.1",
-        "@lumeweb/kernel-rpc-client": "^0.0.2-develop.13",
-        "@lumeweb/libkernel": "^0.1.0-develop.36"
+        "@lumeweb/kernel-rpc-client": "^0.0.2-develop.15",
+        "@lumeweb/libkernel": "^0.1.0-develop.38"
     },
     "devDependencies": {
         "@lumeweb/presetter-kernel-module-preset": "^0.1.0-develop.44",
