@@ -40,14 +40,14 @@ async function handleQuery(aq: ActiveQuery) {
     return;
   }
 
-  let { chain, query, rpcInterface = undefined } = aq.callerInput;
+  let { chain, query } = aq.callerInput;
 
   chain = chain.toUpperCase();
 
   let lava: LavaSDK;
 
   if (!chainInstances.has(chain)) {
-    lava = await setupRelayChain(chain, rpcInterface);
+    lava = await setupRelayChain(chain);
   } else {
     lava = chainInstances.get(chain) as LavaSDK;
   }
@@ -61,15 +61,14 @@ async function handleQuery(aq: ActiveQuery) {
   }
 }
 
-async function setupRelayChain(chain: string, rpcInterface?: string) {
+async function setupRelayChain(chain: string) {
   const instance = await LavaSDK.create({
-    chainID: chain,
-    privateKey: bytesToHex(deriveChildKey(await getKey(), "lavanet")),
     badge: {
       // @ts-ignore
       transport: hyperTransport(rpc),
     },
-    rpcInterface,
+    chainIds: chain,
+    privateKey: bytesToHex(deriveChildKey(await getKey(), "lavanet")),
   });
 
   chainInstances.set(chain, instance);

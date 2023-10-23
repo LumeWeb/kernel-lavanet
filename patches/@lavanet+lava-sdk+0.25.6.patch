@@ -1,0 +1,13 @@
+diff --git a/node_modules/@lavanet/lava-sdk/bin/src/badge/badgeManager.js b/node_modules/@lavanet/lava-sdk/bin/src/badge/badgeManager.js
+index aae75cf..96939be 100644
+--- a/node_modules/@lavanet/lava-sdk/bin/src/badge/badgeManager.js
++++ b/node_modules/@lavanet/lava-sdk/bin/src/badge/badgeManager.js
+@@ -35,7 +35,7 @@ class BadgeManager {
+         if (options.authentication) {
+             this.authentication.append("Authorization", options.authentication);
+         }
+-        this.transport = transport;
++        this.transport = transport || options.transport;
+         this.badgeGeneratorClient = new badges_pb_service_1.BadgeGeneratorClient(this.badgeServerAddress, this.getTransportWrapped());
+     }
+     isActive() {
