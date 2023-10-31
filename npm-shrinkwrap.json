@@ -9,7 +9,7 @@
             "version": "0.1.0-develop.9",
             "hasInstallScript": true,
             "dependencies": {
-                "@lavanet/lava-sdk": "^0.25.6",
+                "@lavanet/lava-sdk": "^0.26.0-rc",
                 "@lumeweb/kernel-rpc-client": "^0.0.2-develop.18",
                 "@lumeweb/libkernel": "^0.1.0-develop.67"
             },
@@ -2083,9 +2083,9 @@
             }
         },
         "node_modules/@lavanet/lava-sdk": {
-            "version": "0.25.6",
-            "resolved": "https://registry.npmjs.org/@lavanet/lava-sdk/-/lava-sdk-0.25.6.tgz",
-            "integrity": "sha512-3FkitiwBGxdJAvPa4GGK165PYUAdoEVipeRVS9Nez6uQzSus7nhG275W010bkaDUQkor34vObrJa//N1P4Q5JA==",
+            "version": "0.26.0-rc",
+            "resolved": "https://registry.npmjs.org/@lavanet/lava-sdk/-/lava-sdk-0.26.0-rc.tgz",
+            "integrity": "sha512-4wOc/HsbjBG+g/dEx+V+Z2jqWfwXPxuobQWh2E65tK0B/VAniRntVjdBktqbFmz22wcM1aHYT5E11JNlQnYvUA==",
             "dependencies": {
                 "@cosmjs/amino": "^0.29.4",
                 "@cosmjs/crypto": "^0.29.4",
