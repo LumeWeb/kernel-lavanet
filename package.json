@@ -14,7 +14,7 @@
         "postinstall": "patch-package"
     },
     "dependencies": {
-        "@lavanet/lava-sdk": "^0.26.0-rc",
+        "@lavanet/lava-sdk": "^0.26.1",
         "@lumeweb/kernel-rpc-client": "^0.0.2-develop.18",
         "@lumeweb/libkernel": "^0.1.0-develop.67"
     },
