@@ -1,12 +1,12 @@
 {
     "name": "@lumeweb/kernel-lavanet",
-    "version": "0.1.0-develop.10",
+    "version": "0.1.0-develop.11",
     "lockfileVersion": 3,
     "requires": true,
     "packages": {
         "": {
             "name": "@lumeweb/kernel-lavanet",
-            "version": "0.1.0-develop.10",
+            "version": "0.1.0-develop.11",
             "hasInstallScript": true,
             "dependencies": {
                 "@lavanet/lava-sdk": "^0.26.1",
